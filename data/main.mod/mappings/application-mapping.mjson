@@ -10,10 +10,6 @@
                     "appClients": {
                         "<->": "id",
                         "converter": {"@": "appClients-converter"}
-                    },
-                    "controllingOrganization": {
-                        "<->": "controllingOrganizationId",
-                        "converter": {"@": "controllingOrganizationConverter"}
                     }
                 }
             },
@@ -35,13 +31,6 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "applicationId == $"
-        }
-    },
-
-    "controllingOrganizationConverter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "id == $"
         }
     }
 }
