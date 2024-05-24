@@ -16,10 +16,6 @@
                     "application": {
                         "<->": "applicationId",
                         "converter": {"@": "applicationForeignKeyConverter"}
-                    },
-                    "cognitoUserPoolClient": {
-                        "<-": "{ClientId: identifier, UserPoolId: cognitoUserPoolId}",
-                        "converter": {"@": "cognitoAppClient-converter"}
                     }
                 }
             },
@@ -41,12 +37,6 @@
         "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
         "values": {
             "convertExpression": "cognitoUserPoolId == $"
-        }
-    },
-    "cognitoAppClient-converter": {
-        "prototype": "mod/data/converter/raw-foreign-value-to-object-converter",
-        "values": {
-            "convertExpression": "ClientId == $.ClientId && UserPoolId == $.UserPoolId"
         }
     },
     "applicationForeignKeyConverter": {
